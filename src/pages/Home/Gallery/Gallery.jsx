@@ -15,7 +15,7 @@ const Gallery = () => {
             <div className="relative h-full">
               <img
                 className="object-cover h-full cursor-pointer transition ease-linear transform group-hover:scale-110 duration-500"
-                src="/public/grads.jpg"
+                src="/grads.jpg"
                 alt="Image 2"
               />
               <div className="absolute inset-0 bg-purple-900 opacity-0 group-hover:opacity-50 transition-opacity duration-500">
@@ -29,7 +29,7 @@ const Gallery = () => {
             <div className="relative">
               <img
                 className="object-cover h-full cursor-pointer transition ease-linear transform group-hover:scale-110 duration-500"
-                src="/public/grads2.jpg"
+                src="/grads2.jpg"
                 alt="Image 2"
               />
               <div className="absolute inset-0 bg-purple-900 opacity-0 group-hover:opacity-50 transition-opacity duration-500">
@@ -43,7 +43,7 @@ const Gallery = () => {
             <div className="relative h-full">
               <img
                 className="object-cover h-full cursor-pointer transition ease-linear transform group-hover:scale-110 duration-500"
-                src="/public/grads3.jpg"
+                src="/grads3.jpg"
                 alt="Image 2"
               />
               <div className="absolute inset-0 bg-purple-900 opacity-0 group-hover:opacity-50 transition-opacity duration-500">
@@ -57,7 +57,7 @@ const Gallery = () => {
             <div className="relative h-full">
               <img
                 className="object-cover h-full cursor-pointer transition ease-linear transform group-hover:scale-110 duration-500"
-                src="/public/grads4.jpg"
+                src="/grads4.jpg"
                 alt="Image 2"
               />
               <div className="absolute inset-0 bg-purple-900 opacity-0 group-hover:opacity-50 transition-opacity duration-500">
@@ -71,7 +71,7 @@ const Gallery = () => {
             <div className="relative h-full">
               <img
                 className="object-cover h-full cursor-pointer transition ease-linear transform group-hover:scale-110 duration-500"
-                src="/public/grads5.jpg"
+                src="/grads5.jpg"
                 alt="Image 2"
               />
               <div className="absolute inset-0 bg-purple-900 opacity-0 group-hover:opacity-50 transition-opacity duration-500">

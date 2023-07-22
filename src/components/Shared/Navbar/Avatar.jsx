@@ -6,7 +6,7 @@ const Avatar = () => {
   const { user } = useAuth()
   return (
     <img
-      className="rounded-full "
+      className="rounded-md"
       referrerPolicy="no-referrer" // If user img not shows use this policy
       src={user ? user.photoURL : avatarImg}
       alt="profile"

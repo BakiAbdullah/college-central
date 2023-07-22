@@ -16,7 +16,7 @@ const ScrollToTop = () => {
   return isVisible ? (
     <div  className="scroll-top rounded-full p-2 bg-gradient-to-r from-rose-700 to-red-600 hover:scale-110 duration-200">
       <a href="#top">
-        <HiArrowUp className="text-white" fontSize="medium" />
+        <HiArrowUp className="text-white" fontSize="large" />
       </a>
     </div>
   ) : null;

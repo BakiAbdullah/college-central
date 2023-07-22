@@ -2,7 +2,7 @@
 
 const MainHeading = ({ title, subtitle }) => {
   return (
-    <div className="md:w-4/12 relative lg:w-4/12 mt-6 lg:mt-12 lg:mb-12 text-left">
+    <div className="md:w-4/12 relative lg:w-4/12 mt-6 lg:mt-20 lg:mb-12 text-left">
       <p className="text-rosered before:border-2 font-poppins uppercase lg:text-xl  mb-2">
         <span className="ms-2">{title}</span>
       </p>

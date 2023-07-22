@@ -30,12 +30,12 @@ const PopupLogin = () => {
   return (
     <div>
       <div className="py-6 space-x-4">
-        <span className="w-10 h-10 hover:bg-lightAmber items-center justify-center inline-flex rounded-full font-bold text-lg border-2 hover:border-darkAmber cursor-pointer duration-200 border-white">
+        <span className="w-10 h-10 hover:bg-rosered items-center justify-center inline-flex rounded-full font-bold text-lg border-2 hover:border-rosered cursor-pointer duration-200 border-white">
           f
         </span>
         <span
           onClick={handleGoogleSignIn}
-          className="w-10 h-10 hover:bg-lightAmber  items-center justify-center inline-flex rounded-full font-bold text-lg border-2 hover:border-darkAmber cursor-pointer duration-200 border-white"
+          className="w-10 h-10 hover:bg-rosered  items-center justify-center inline-flex rounded-full font-bold text-lg border-2 hover:border-rosered cursor-pointer duration-200 border-white"
         >
           G+
         </span>
