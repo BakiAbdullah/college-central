@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         gasoek: ["Gasoek One", "sans-serif"],
         archivo: ["Archivo Black", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
