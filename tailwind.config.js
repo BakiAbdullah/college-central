@@ -7,7 +7,7 @@ export default {
         gray: "#F6F1E9",
         lightGray: "#B0A4A4",
         pink: "#FFF4F4",
-        darkGray: "#454545",
+        darkGray: "#323232",
         creamYellow: "#F7E6C4",
         darkPurple: "#0C317A",
         rosered: "#FF3434",

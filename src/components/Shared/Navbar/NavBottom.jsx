@@ -22,24 +22,34 @@ const NavMiddle = () => {
             home
           </NavLink>
           <NavLink
-            to="/instructors"
+            to="/colleges"
             className={({ isActive }) =>
               isActive
                 ? "text-rosered font-semibold border-b-2 border-rosered "
                 : "hover:text-rosered border-b-2 border-rosered border-opacity-0 hover:border-opacity-100 text-white font-semibold  duration-300 dark:text-gray-200  mx-1.5 sm:mx-6"
             }
           >
-            Instructors
+            Colleges
           </NavLink>
           <NavLink
-            to="/allClasses"
+            to="/admission"
             className={({ isActive }) =>
               isActive
                 ? "text-rosered font-semibold border-b-2 border-rosered "
                 : "hover:text-rosered border-b-2 border-rosered border-opacity-0 hover:border-opacity-100 text-white font-semibold  duration-300 dark:text-gray-200  mx-1.5 sm:mx-6"
             }
           >
-            Classes
+            Admission
+          </NavLink>
+          <NavLink
+            to="/mycollege"
+            className={({ isActive }) =>
+              isActive
+                ? "text-rosered font-semibold border-b-2 border-rosered "
+                : "hover:text-rosered border-b-2 border-rosered border-opacity-0 hover:border-opacity-100 text-white font-semibold  duration-300 dark:text-gray-200  mx-1.5 sm:mx-6"
+            }
+          >
+            My College
           </NavLink>
 
           <NavLink
@@ -52,21 +62,11 @@ const NavMiddle = () => {
           >
             About us
           </NavLink>
-          <NavLink
-            to="/workshop"
-            className={({ isActive }) =>
-              isActive
-                ? "text-rosered font-semibold border-b-2 border-rosered "
-                : "hover:text-rosered border-b-2 border-rosered border-opacity-0 hover:border-opacity-100 text-white font-semibold  duration-300 dark:text-gray-200  mx-1.5 sm:mx-6"
-            }
-          >
-            Workshops
-          </NavLink>
 
           <div className="hidden lg:flex justify-center items-center gap-2 ms-16">
-          <FaFacebookSquare className="text-rosered rounded-md text-3xl cursor-pointer bg-white"></FaFacebookSquare>
-          <FaTwitterSquare className="text-rosered rounded-md text-3xl cursor-pointer bg-white"></FaTwitterSquare>
-          <FaYoutubeSquare className="text-rosered rounded-md text-3xl cursor-pointer bg-white"></FaYoutubeSquare>
+            <FaFacebookSquare className="text-white bg-darkPurple rounded-md text-3xl cursor-pointer"></FaFacebookSquare>
+            <FaTwitterSquare className="text-white bg-darkPurple rounded-md text-3xl cursor-pointer"></FaTwitterSquare>
+            <FaYoutubeSquare className="text-white bg-darkPurple rounded-md text-3xl cursor-pointer"></FaYoutubeSquare>
           </div>
         </div>
       </nav>
