@@ -8,11 +8,11 @@ import AllCollegeCard from "./AllCollegeCard";
 
 const AllColleges = () => {
   // Tanstack Query Implementation
-  const { data: classes = [], isLoading: loading, refetch } = useQuery({
+  const { data: colleges = [], isLoading: loading, refetch } = useQuery({
     queryKey: ["allcolleges"],
     // enabled: !loading,
     queryFn: async () => {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/allcolleges?limit=6`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/allcolleges?limit=8`);
       return res.json();
     },
   });
@@ -32,7 +32,7 @@ const AllColleges = () => {
             subtitle={"Discover your dream college."}
           ></MainHeading>
           <div className="grid my-24 grid-cols-1 lg:grid-cols-2 lg:gap-20">
-            {classes.map((college) => (
+            {colleges.map((college) => (
               <AllCollegeCard
                 key={college._id}
                 college={college}

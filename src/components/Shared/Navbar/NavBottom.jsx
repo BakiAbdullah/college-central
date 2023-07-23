@@ -4,7 +4,7 @@ const NavMiddle = () => {
   return (
     <div>
       <nav className="bg-darkPurple dark:bg-gray-800">
-        <div className="container flex items-center gap-2 lg:gap-0 justify-center p-6 lg:text-lg text-xs mx-auto text-gray-600 capitalize dark:text-gray-300">
+        <div className="container flex items-center gap-2 lg:gap-0 justify-center lg:p-6 lg:text-lg text-sm mx-auto text-gray-600 capitalize dark:text-gray-300">
           <NavLink
             to="/"
             className={({ isActive }) =>

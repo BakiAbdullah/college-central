@@ -44,7 +44,7 @@ const Navbar = () => {
 
           <NavMiddle></NavMiddle>
 
-          <nav className="flex items-center justify-center space-x-2">
+          <nav className="flex items-center justify-center text-xs lg:text-base space-x-2">
             {user ? (
               <>
                 <ul className="ml-auto xl:w-48 flex items-center justify-end">

@@ -14,7 +14,7 @@ const AllCollegeCard = ({ college }) => {
   return (
     <>
       <div className="grid place-items-center mt-10 bg-gray-900 group cursor-pointer">
-        <div className="bg-white border-2 border-darkPurple rounded-md bg-gray-800 shadow-lg">
+        <div className="bg-white border-2 border-darkPurple rounded-md">
           <div className="md:flex px-4 leading-none max-w-4xl">
             <div className="flex-none">
               <img
