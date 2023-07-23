@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const NavMiddle = () => {
   return (
     <div>
-      <nav className="bg-darkPurple shadow-sm dark:bg-gray-800">
+      <nav className="bg-darkPurple dark:bg-gray-800">
         <div className="container flex items-center gap-2 lg:gap-0 justify-center p-6 lg:text-lg text-xs mx-auto text-gray-600 capitalize dark:text-gray-300">
           <NavLink
             to="/"
