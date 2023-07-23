@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
+// import Avatar from "./Avatar";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
