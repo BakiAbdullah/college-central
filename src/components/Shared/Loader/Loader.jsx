@@ -1,4 +1,4 @@
-import { RiseLoader } from "react-spinners";
+import { PulseLoader } from "react-spinners";
 
 
 const Loader = () => {
@@ -12,7 +12,7 @@ const Loader = () => {
       items-center 
     "
     >
-      <RiseLoader size={12} color="orange" />
+      <PulseLoader size={12} color="red" />
     </div>
   );
 };
