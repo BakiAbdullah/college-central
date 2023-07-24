@@ -48,7 +48,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <ul className="ml-auto xl:w-48 flex items-center justify-end">
-                  <button className="bg-rosered relative overflow-hidden text-white duration-300 hover:rounded-md rounded-md rounded-ss-3xl font-bold px-5 py-2">
+                  <button className="bg-rosered relative overflow-hidden text-white duration-300 rounded-md font-bold px-5 py-2">
                     {user ? user?.displayName.slice(0, 15) : "Not Found"}
                     {/* <span
                       title={`${user ? user?.displayName : "Not Found"}`}
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </ul>
 
                 <div
-                  className="cursor-pointer flex items-center justify-center rounded-md rounded-se-3xl hover:rounded-md duration-300 p-2 bg-white"
+                  className="cursor-pointer flex items-center justify-center rounded-md duration-300 p-2 bg-white"
                   onClick={logOut}
                 >
                   <span className="text-darkPurple px-2 font-extrabold ">

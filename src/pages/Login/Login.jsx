@@ -5,8 +5,10 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { ImSpinner } from "react-icons/im";
 import { FaEye } from "react-icons/fa";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import PopupLogin from "../../components/PopUpLogin/PopupLogin";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { app } from "../../firebase/firebase.config";
 
 
 const Login = () => {
@@ -15,10 +17,12 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const [show, setShow] = useState(false);
+  const emailRef = useRef();
+  const auth = getAuth(app);
 
-  const handleShow = ()=> {
-    setShow(!show)
-  }
+  const handleShow = () => {
+    setShow(!show);
+  };
 
   const {
     register,
@@ -28,10 +32,10 @@ const Login = () => {
 
   const onSubmit = (data) => {
     // Handle sign in
-    console.log(data)
+    console.log(data);
     signIn(data.email, data.password)
       .then((result) => {
-        toast.success('Login Succes!')
+        toast.success("Login Succes!");
         setLoading(false);
         console.log(result.user);
         navigate(from, { replace: true });
@@ -43,6 +47,22 @@ const Login = () => {
       });
   };
 
+  // Reset Password
+  const handleResetPassword = () => {
+    const email = emailRef.current.value;
+    if (!email) {
+      toast.success("Please provide your email address to reset password");
+      return;
+    }
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success("Please Check your email");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
 
   return (
     <section className="relative mt-28 pb-20 flex justify-center items-center text-white">
@@ -52,7 +72,7 @@ const Login = () => {
             <Logo center={true}></Logo>
           </h1>
           <PopupLogin></PopupLogin>
-          <p className="text-gray-100">or use email your account</p>
+          <p className="text-gray-100">or use your email account</p>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="sm:w-2/3 w-full px-4 lg:px-0 mx-auto"
@@ -62,6 +82,7 @@ const Login = () => {
                 type="email"
                 {...register("email", { required: true })}
                 id="email"
+                ref={emailRef}
                 placeholder="Email"
                 className="block caret-darkAmber w-full p-4 text-lg rounded-sm bg-white text-darkGray"
               />
@@ -104,7 +125,7 @@ const Login = () => {
               )}
             </div>
             <div className="text-right text-gray-400 hover:underline hover:text-gray-100">
-              <a href="#">Forgot password?</a>
+              <button onClick={handleResetPassword}>Forgot password?</button>
             </div>
             <div className="px-4 pb-2 pt-4">
               <button

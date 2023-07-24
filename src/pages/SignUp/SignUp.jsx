@@ -62,7 +62,7 @@ const SignUp = () => {
             <Logo center={true}></Logo>
           </h1>
           <PopupLogin></PopupLogin>
-          <p className="text-gray-100">or use email your account</p>
+          <p className="text-gray-100">or use your email account</p>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="sm:w-2/3 w-full px-4 lg:px-0 mx-auto"
@@ -169,10 +169,6 @@ const SignUp = () => {
               {errors.name && (
                 <span className="text-red-700">Photo Url is required</span>
               )}
-            </div>
-
-            <div className="text-right text-gray-400 hover:underline hover:text-gray-100">
-              <a href="#">Forgot your password?</a>
             </div>
             <div className="px-4 pb-2 pt-4">
               <button

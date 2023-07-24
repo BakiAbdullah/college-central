@@ -1,7 +1,47 @@
-// import Button from "../../../components/Button/Button";
+
+import { useState } from "react";
 import { HiSearch } from "react-icons/hi";
+import { useQuery } from "@tanstack/react-query";
+import MainHeading from "../../../components/MainHeading/MainHeading";
+import WrapperContainer from "../../../components/Shared/Container/WrapperContainer";
+import HomeCollegeCard from "../CollegeCard/HomeCollegeCard";
+import Loader from "../../../components/Shared/Loader/Loader";
 
 const Banner = () => {
+  const [collegeData, setCollegeData] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
+  // Search college by Name
+  const handleCollegeSearch = () => {
+    fetch(`${import.meta.env.VITE_API_URL}/searchCollege/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCollegeData(data);
+      });
+  };
+
+
+  // Tanstack Query Implementation
+  const {
+    data: colleges = [],
+    isLoading: loading,
+    refetch,
+  } = useQuery({
+    queryKey: ["allcolleges"],
+    // enabled: !loading,
+    queryFn: async () => {
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/allcolleges?limit=3`
+      );
+      return res.json();
+    },
+  });
+
+  if (loading) {
+    refetch();
+    return <Loader></Loader>;
+  }
+
   return (
     <>
       <div className="relative bg-darkPurple">
@@ -26,20 +66,21 @@ const Banner = () => {
                 <span className="relative text-rosered">Online!</span>
               </span>
             </h2>
-            <form className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
+            <div className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
               <input
+                onChange={(e) => setSearchText(e.target.value)}
                 placeholder="Search Colleges..."
                 required
                 type="text"
                 className="flex-grow w-full h-12 px-4 mb-3 text-darkGray transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
               />
-              <a
-                href="/"
+              <button
+                onClick={handleCollegeSearch}
                 className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-rosered focus:outline-none"
               >
                 <HiSearch className="me-1 text-xl"></HiSearch> Search
-              </a>
-            </form>
+              </button>
+            </div>
             <p className="max-w-md mb-10 text-xs tracking-wide text-indigo-100 sm:text-sm sm:mx-auto md:mb-16">
               Open Doors to Opportunity, Where Dreams Take Flight. Search and
               Find Your College.
@@ -63,6 +104,22 @@ const Banner = () => {
           {/* <img src="/public/graduates.png" alt="" /> */}
         </div>
       </div>
+
+      <WrapperContainer>
+        <MainHeading
+          title={"Top Colleges"}
+          subtitle={"Explore your dream college."}
+        ></MainHeading>
+        <div className="grid my-12 grid-cols-1 lg:grid-cols-3 lg:gap-10 ">
+          {collegeData.length > 0
+            ? collegeData.map((college) => (
+                <HomeCollegeCard key={college._id} college={college} />
+              ))
+            : colleges.map((college) => (
+                <HomeCollegeCard key={college._id} college={college} />
+              ))}
+        </div>
+      </WrapperContainer>
     </>
   );
 };
