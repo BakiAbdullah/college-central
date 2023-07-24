@@ -33,7 +33,7 @@ const NavMiddle = () => {
                 : "hover:text-rosered border-b-2 border-rosered border-opacity-0 hover:border-opacity-100 text-white font-semibold  duration-300 dark:text-gray-200  mx-1.5 sm:mx-6"
             }
           >
-            Addmission
+            Admission
           </NavLink>
           <NavLink
             to="/mycollege"
