@@ -110,7 +110,7 @@ const Banner = () => {
           title={"Top Colleges"}
           subtitle={"Explore your dream college."}
         ></MainHeading>
-        <div className="grid my-12 grid-cols-1 lg:grid-cols-3 lg:gap-10 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-10 ">
           {collegeData.length > 0
             ? collegeData.map((college) => (
                 <HomeCollegeCard key={college._id} college={college} />

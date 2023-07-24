@@ -14,7 +14,7 @@ const HomeCollegeCard = ({ college }) => {
   } = college;
   return (
     <>
-      <div className="bg-white text-darkGray shadow-lg rounded-lg overflow-hidden my-10">
+      <div className="bg-white text-darkGray shadow-lg rounded-lg overflow-hidden">
         <div className="p-4 py-2">
           <p className="pt-4 text-lg text-rosered uppercase text-left font-bold">
             {collegeName}
