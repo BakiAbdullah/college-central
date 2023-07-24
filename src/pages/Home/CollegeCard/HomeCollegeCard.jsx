@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 
 
 const HomeCollegeCard = ({ college }) => {
   const {
+    _id,
     collegeImage,
     collegeName,
     collegeRating,
@@ -34,9 +36,11 @@ const HomeCollegeCard = ({ college }) => {
             <span className="font-bold">Addmission:</span> {admissionDate}
           </span>
 
-          <button className="mt-1 my-4 border hover:bg-darkPurple hover:text-white duration-200 tansition ease-linear p-2 shadow-2xl text-sm rounded-md text-darkPurple font-bold hover:bg-gray-800">
-            More Details
-          </button>
+          <Link to={`/allcolleges/${_id}`}>
+            <button className="mt-1 my-4 border hover:bg-darkPurple hover:text-white duration-200 tansition ease-linear p-2 shadow-2xl text-sm rounded-md text-darkPurple font-bold hover:bg-gray-800">
+              More Details
+            </button>
+          </Link>
         </div>
       </div>
     </>

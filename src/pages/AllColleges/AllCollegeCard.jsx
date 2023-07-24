@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import "./AllCollegeCard.css";
 
 const AllCollegeCard = ({ college }) => {
   const {
+    _id,
     collegeImage,
     collegeName,
     collegeRating,
@@ -48,9 +50,11 @@ const AllCollegeCard = ({ college }) => {
           </div>
           <div className="flex justify-end items-center px-4 mb-4 w-full">
             <div className="flex">
-              <button className="mt-1 bg-darkPurple p-2 shadow-2xl text-sm rounded-md text-white font-bold hover:bg-gray-800">
-                More Details
-              </button>
+              <Link to={`/allcolleges/${_id}`}>
+                <button className="mt-1 bg-darkPurple p-2 shadow-2xl text-sm rounded-md text-white font-bold hover:bg-gray-800">
+                  More Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -26,14 +26,14 @@ const NavMiddle = () => {
             Colleges
           </NavLink>
           <NavLink
-            to="/admission"
+            to="/addmission"
             className={({ isActive }) =>
               isActive
                 ? "text-rosered font-semibold border-b-2 border-rosered "
                 : "hover:text-rosered border-b-2 border-rosered border-opacity-0 hover:border-opacity-100 text-white font-semibold  duration-300 dark:text-gray-200  mx-1.5 sm:mx-6"
             }
           >
-            Admission
+            Addmission
           </NavLink>
           <NavLink
             to="/mycollege"
@@ -47,7 +47,7 @@ const NavMiddle = () => {
           </NavLink>
 
           <NavLink
-            to="/about"
+            to="/aboutus"
             className={({ isActive }) =>
               isActive
                 ? "text-rosered font-semibold border-b-2 border-rosered "
